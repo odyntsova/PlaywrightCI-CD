@@ -33,8 +33,6 @@ namespace EaTestAutomation;
 //     }
 // }
 
-[Collection(name:"Sequential")]
-
 public class CreateProductTest
 {
     private readonly ITestFixtureBased _testFixtureBased;
@@ -50,22 +48,22 @@ public class CreateProductTest
     }
     
     
-    // [Theory, AutoData]
-    //
-    // public async Task TestWithAutoFixture(Product product)
-    // {
-    //     //Arrange
-    //     await  _testFixtureBased.NavigateToUrl();
-    //     await _productListPage.CreateProductAsync();
-    //     await _productPage.CreateProduct(product);
-    //     await _productPage.ClickCreate();
-    //
-    //     //Act
-    //     await _productListPage.ClickProductFormList(product.Name);
-    //     
-    //     //Assert
-    //     var element = _productListPage.IsProductCreated(product.Name);
-    //     await Assertions.Expect(element).ToBeVisibleAsync();
-    // }
-    //
+    [Theory (Skip = "Skipping local tests"), AutoData]
+    
+    public async Task TestWithAutoFixture(Product product)
+    {
+        //Arrange
+        await  _testFixtureBased.NavigateToUrl();
+        await _productListPage.CreateProductAsync();
+        await _productPage.CreateProduct(product);
+        await _productPage.ClickCreate();
+    
+        //Act
+        await _productListPage.ClickProductFormList(product.Name);
+        
+        //Assert
+        var element = _productListPage.IsProductCreated(product.Name);
+        await Assertions.Expect(element).ToBeVisibleAsync();
+    }
+    
 }

@@ -128,23 +128,23 @@ public class Tests
     //     await Assertions.Expect(element).ToBeVisibleAsync();
     // }
     
-    // [Theory, AutoData]
-    //
-    // public async Task TestWithAutoFixture(Product product)
-    // {
-    //     
-    //     var page = await _playwrightDriver.Page;
-    //     await page.GotoAsync("http://localhost:8000/");
-    //     
-    //     
-    //     await _productListPage.CreateProductAsync();
-    //     await _productPage.CreateProduct(product);
-    //     await _productPage.ClickCreate();
-    //
-    //     await _productListPage.ClickProductFormList(product.Name);
-    //     
-    //     var element = _productListPage.IsProductCreated(product.Name);
-    //     await Assertions.Expect(element).ToBeVisibleAsync();
-    // }
+    [Theory(Skip = "Skipping local tests"), AutoData]
+    
+    public async Task TestWithAutoFixture(Product product)
+    {
+        
+        var page = await _playwrightDriver.Page;
+        await page.GotoAsync("http://ea_webapp:8000/");
+        
+        
+        await _productListPage.CreateProductAsync();
+        await _productPage.CreateProduct(product);
+        await _productPage.ClickCreate();
+    
+        await _productListPage.ClickProductFormList(product.Name);
+        
+        var element = _productListPage.IsProductCreated(product.Name);
+        await Assertions.Expect(element).ToBeVisibleAsync();
+    }
     
 }

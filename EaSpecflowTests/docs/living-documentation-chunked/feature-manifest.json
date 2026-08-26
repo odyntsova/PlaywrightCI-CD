@@ -1,0 +1,36 @@
+{
+  "generatedAt": "2026-08-20T11:15:52.998588Z",
+  "totalFeatures": 1,
+  "totalScenarios": 1,
+  "indexFile": "feature-index.json",
+  "indexHash": "746fafd693af3ffe274c3f7cb928eb74566cbd90b4a6c9a38b9ea77cb3e9b2a2",
+  "chunkStrategy": "per-feature",
+  "chunkCount": 1,
+  "capabilities": {
+    "workerSearch": true,
+    "virtualization": true,
+    "tableChunking": true
+  },
+  "featureMap": [
+    {
+      "featureId": "926a7ccc0787",
+      "name": "Product",
+      "filePath": "./Features/Product.feature",
+      "status": "passed",
+      "scenarioCount": 1,
+      "chunkFile": "features/926a7ccc0787.json",
+      "chunkHash": "d2eab55710537e0af4743430e52d13811225b9585e138ab59abf4b60c0b48ca4",
+      "estimatedBytes": 5518,
+      "tags": [],
+      "scenarioRange": {
+        "start": 0,
+        "end": 1
+      }
+    }
+  ],
+  "schemaVersion": "1.0",
+  "generatorVersion": "1.0.0.0",
+  "compatibilityMinVersion": "1.0",
+  "buildId": "20260820111552-cb3e829c",
+  "extensions": {}
+}

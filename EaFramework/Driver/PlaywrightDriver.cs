@@ -44,7 +44,9 @@ public class PlaywrightDriver : IDisposable, IPlaywrightDriver
 
     private async Task<IBrowserContext> CreateBrowserContext()
     {
-        return await (await _browser).NewContextAsync();
+        var context = await (await _browser).NewContextAsync();
+        context.SetDefaultTimeout(60000);
+        return context;
 
     }
 

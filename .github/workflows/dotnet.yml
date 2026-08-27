@@ -28,7 +28,6 @@ jobs:
       uses: cakhanif/action-install-powershell@v1
     - name: Install Playwright browsers
       run: pwsh ${{ github.workspace }}/EaApplicationTest/bin/Debug/net10.0/playwright.ps1 install --with-deps
-
     - name: Test
       working-directory: ${{ github.workspace }}/EaApplicationTest
       run: dotnet test --no-build --verbosity normal

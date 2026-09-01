@@ -51,7 +51,7 @@ public class Tests1
         _productPage = productPage;
     }
     
-    [Theory(Skip = "Skipping local tests"), AutoData]
+    [Theory, AutoData]
     
     public async Task TestWithAutoFixture(Product product)
     {

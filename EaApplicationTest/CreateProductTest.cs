@@ -48,7 +48,7 @@ public class CreateProductTest
     }
     
     
-    [Theory (Skip = "Skipping local tests"), AutoData]
+    [Theory, AutoData]
     
     public async Task TestWithAutoFixture(Product product)
     {

@@ -134,7 +134,7 @@ public class Tests
     {
         
         var page = await _playwrightDriver.Page;
-        await page.GotoAsync("http://ea_webapp:8000/");
+        await page.GotoAsync("http://localhost:5001/");
         
         
         await _productListPage.CreateProductAsync();

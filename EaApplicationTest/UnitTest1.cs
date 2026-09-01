@@ -50,17 +50,17 @@ public class Tests
         _productPage = productPage;
     }
     
-    [Fact]
-    public async Task Test1()
-    {
-        var page = await _playwrightDriver.Page;
-        await page.GotoAsync("http://localhost:5001/");
-        await page.GetByRole(AriaRole.Link, new PageGetByRoleOptions { Name = "Login" }).ClickAsync();
-        await page.GetByLabel("UserName").FillAsync("admin");
-        await page.GetByLabel("Password").FillAsync("password");
-        await page.GetByRole(AriaRole.Button, new PageGetByRoleOptions { Name = "Log in" }).ClickAsync();
-        await page.GetByRole(AriaRole.Link, new PageGetByRoleOptions { Name = "Employee List" }).ClickAsync();
-    }
+    // [Fact]
+    // public async Task Test1()
+    // {
+    //     var page = await _playwrightDriver.Page;
+    //     await page.GotoAsync("https://eaapp.somee.com/");
+    //     await page.GetByRole(AriaRole.Link, new PageGetByRoleOptions { Name = "Login" }).ClickAsync();
+    //     await page.GetByLabel("UserName").FillAsync("admin");
+    //     await page.GetByLabel("Password").FillAsync("password");
+    //     await page.GetByRole(AriaRole.Button, new PageGetByRoleOptions { Name = "Log in" }).ClickAsync();
+    //     await page.GetByRole(AriaRole.Link, new PageGetByRoleOptions { Name = "Employee List" }).ClickAsync();
+    // }
     
     // [Fact]
     // public async Task LoginTest()

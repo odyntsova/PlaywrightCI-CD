@@ -54,7 +54,7 @@ public class Tests
     public async Task Test1()
     {
         var page = await _playwrightDriver.Page;
-        await page.GotoAsync("http://eaapp.somee.com");
+        await page.GotoAsync("http://localhost:5001/");
         await page.GetByRole(AriaRole.Link, new PageGetByRoleOptions { Name = "Login" }).ClickAsync();
         await page.GetByLabel("UserName").FillAsync("admin");
         await page.GetByLabel("Password").FillAsync("password");
